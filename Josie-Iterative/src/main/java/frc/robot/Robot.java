@@ -74,6 +74,8 @@ public class Robot extends TimedRobot {
   @Override
   public void teleopPeriodic() {
     differentialDrive.tankDrive(leftJoystick.getY(), rightJoystick.getY());
+    System.out.println("left joystick: " + leftJoystick.getY());
+    System.out.println("right joystick: " + rightJoystick.getY());
     if (rightJoystick.getTrigger()) {
       servo.setAngle(90);
     } else {
